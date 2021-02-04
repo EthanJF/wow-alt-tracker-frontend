@@ -6,7 +6,8 @@ export default class Homepage extends Component {
 
     state = {
         username: "",
-        characters: []
+        characters: [],
+        blizzardToken: ""
     }
 
     componentDidMount(){
@@ -37,10 +38,11 @@ export default class Homepage extends Component {
     }
 
     render(){
+        console.log(this.state)
         return(
             <div className="homepage">
                 <Nav username={this.state.username}/>
-                <MainContainer userID={this.props.userID} characters={this.state.characters} updateCharacters={this.updateCharacters}/>
+                <MainContainer userID={this.props.userID} characters={this.state.characters} updateCharacters={this.updateCharacters} blizzardToken={this.fetchBlizzardToken}/>
             </div>
         )
     }

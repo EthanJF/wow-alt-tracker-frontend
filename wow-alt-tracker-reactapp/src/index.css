@@ -25,11 +25,15 @@ code {
 
 .main-container {
   height: 100%;
-  margin-top: 10%;
-  margin-right: 15%;
+  margin-top: 5%;
   padding: 2%;
 }
-
 .character-list {
-  list-style-type: none;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.character-table table, th, td {
+  border: 1px solid black;
+  padding: 1.5%;
 }
